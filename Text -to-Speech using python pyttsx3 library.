@@ -1,0 +1,11 @@
+# First install pyttsx3 using command - 'pip install pyttsx3' in the terminal.
+
+import pyttsx3
+engine=pyttsx3.init()
+
+sentence="Hey users welcome to my github profile."  # Sentence is the text you want to convert into speech.
+engine.setProperty('rate',125)
+voices=engine.getProperty('voices')
+engine.setProperty('voice',voices[0].id) #For voices[0]-is for male speech and voices[1]-is for female speech.
+engine.say(sentence)
+engine.runAndWait()
